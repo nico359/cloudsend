@@ -26,9 +26,9 @@ from .webdav import WebDAVClient
 from .push import PushEngine
 
 
-@Gtk.Template(resource_path='/io/github/nico359/cloudsend/targets_page.ui')
-class CloudsendTargetsPage(Adw.NavigationPage):
-    __gtype_name__ = 'CloudsendTargetsPage'
+@Gtk.Template(resource_path='/io/github/nico359/simplesync/targets_page.ui')
+class SimplesyncTargetsPage(Adw.NavigationPage):
+    __gtype_name__ = 'SimplesyncTargetsPage'
 
     content_stack = Gtk.Template.Child()
     targets_listbox = Gtk.Template.Child()
@@ -90,15 +90,15 @@ class CloudsendTargetsPage(Adw.NavigationPage):
 
     def _on_add_clicked(self, button):
         """Navigate to the target edit page for a new target."""
-        from .target_edit_page import CloudsendTargetEditPage
-        page = CloudsendTargetEditPage(targets_page=self)
+        from .target_edit_page import SimplesyncTargetEditPage
+        page = SimplesyncTargetEditPage(targets_page=self)
         nav = self.get_ancestor(Adw.NavigationView)
         nav.push(page)
 
     def _on_row_activated(self, row, target):
         """Navigate to the target edit page for an existing target."""
-        from .target_edit_page import CloudsendTargetEditPage
-        page = CloudsendTargetEditPage(target=target, targets_page=self)
+        from .target_edit_page import SimplesyncTargetEditPage
+        page = SimplesyncTargetEditPage(target=target, targets_page=self)
         nav = self.get_ancestor(Adw.NavigationView)
         nav.push(page)
 

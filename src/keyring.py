@@ -24,7 +24,7 @@ gi.require_version('Secret', '1')
 from gi.repository import Secret
 
 SCHEMA = Secret.Schema.new(
-    "io.github.nico359.cloudsend",
+    "io.github.nico359.simplesync",
     Secret.SchemaFlags.NONE,
     {"type": Secret.SchemaAttributeType.STRING},
 )
@@ -47,7 +47,7 @@ def store_credentials(server_url, username, app_password, callback=None):
                     SCHEMA,
                     {"type": cred_type},
                     Secret.COLLECTION_DEFAULT,
-                    f"Cloudsend {cred_type}",
+                    f"Simplesync {cred_type}",
                     password,
                     None,
                 )
@@ -75,7 +75,7 @@ def store_credentials(server_url, username, app_password, callback=None):
             SCHEMA,
             {"type": cred_type},
             Secret.COLLECTION_DEFAULT,
-            f"Cloudsend {cred_type}",
+            f"Simplesync {cred_type}",
             password,
             None,
             lambda source, result, ct=cred_type: _on_store_complete(source, result, ct),

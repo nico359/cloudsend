@@ -1,3 +1,0 @@
-[D-BUS Service]
-Name=io.github.nico359.cloudsend
-Exec=@bindir@/cloudsend --gapplication-service

@@ -22,9 +22,9 @@ from . import keyring
 from .webdav import WebDAVClient
 
 
-@Gtk.Template(resource_path='/io/github/nico359/cloudsend/remote_browser_page.ui')
-class CloudsendRemoteBrowserPage(Adw.NavigationPage):
-    __gtype_name__ = 'CloudsendRemoteBrowserPage'
+@Gtk.Template(resource_path='/io/github/nico359/simplesync/remote_browser_page.ui')
+class SimplesyncRemoteBrowserPage(Adw.NavigationPage):
+    __gtype_name__ = 'SimplesyncRemoteBrowserPage'
 
     browser_stack = Gtk.Template.Child()
     folders_listbox = Gtk.Template.Child()

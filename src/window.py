@@ -20,13 +20,13 @@
 from gi.repository import Adw
 from gi.repository import Gtk
 
-from .targets_page import CloudsendTargetsPage
-from .account_page import CloudsendAccountPage
+from .targets_page import SimplesyncTargetsPage
+from .account_page import SimplesyncAccountPage
 
 
-@Gtk.Template(resource_path='/io/github/nico359/cloudsend/window.ui')
-class CloudsendWindow(Adw.ApplicationWindow):
-    __gtype_name__ = 'CloudsendWindow'
+@Gtk.Template(resource_path='/io/github/nico359/simplesync/window.ui')
+class SimplesyncWindow(Adw.ApplicationWindow):
+    __gtype_name__ = 'SimplesyncWindow'
 
     toast_overlay = Gtk.Template.Child()
     navigation_view = Gtk.Template.Child()
@@ -37,11 +37,11 @@ class CloudsendWindow(Adw.ApplicationWindow):
         self._toast_overlay = self.toast_overlay
 
         # Push the targets page as the root
-        self._targets_page = CloudsendTargetsPage()
+        self._targets_page = SimplesyncTargetsPage()
         self.navigation_view.push(self._targets_page)
         self._targets_page.refresh()
 
     def show_account_page(self):
         """Push the account settings page onto the navigation stack."""
-        page = CloudsendAccountPage()
+        page = SimplesyncAccountPage()
         self.navigation_view.push(page)

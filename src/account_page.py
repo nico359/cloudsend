@@ -22,9 +22,9 @@ from . import keyring
 from .webdav import WebDAVClient
 
 
-@Gtk.Template(resource_path='/io/github/nico359/cloudsend/account_page.ui')
-class CloudsendAccountPage(Adw.NavigationPage):
-    __gtype_name__ = 'CloudsendAccountPage'
+@Gtk.Template(resource_path='/io/github/nico359/simplesync/account_page.ui')
+class SimplesyncAccountPage(Adw.NavigationPage):
+    __gtype_name__ = 'SimplesyncAccountPage'
 
     server_url_row = Gtk.Template.Child()
     username_row = Gtk.Template.Child()

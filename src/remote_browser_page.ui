@@ -2,7 +2,7 @@
 <interface>
   <requires lib="gtk" version="4.0"/>
   <requires lib="libadwaita" version="1.0"/>
-  <template class="CloudsendRemoteBrowserPage" parent="AdwNavigationPage">
+  <template class="SimplesyncRemoteBrowserPage" parent="AdwNavigationPage">
     <property name="title" translatable="yes">Select Remote Folder</property>
     <property name="child">
       <object class="AdwToolbarView">

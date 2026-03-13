@@ -1,9 +1,9 @@
 {
-    "id" : "io.github.nico359.cloudsend",
+    "id" : "io.github.nico359.simplesync",
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "49",
     "sdk" : "org.gnome.Sdk",
-    "command" : "cloudsend",
+    "command" : "simplesync",
     "finish-args" : [
         "--share=network",
         "--share=ipc",
@@ -26,7 +26,7 @@
     ],
     "modules" : [
         {
-            "name" : "cloudsend",
+            "name" : "simplesync",
             "builddir" : true,
             "buildsystem" : "meson",
             "sources" : [

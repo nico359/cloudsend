@@ -2,8 +2,8 @@
 <interface>
   <requires lib="gtk" version="4.0"/>
   <requires lib="Adw" version="1.0"/>
-  <template class="CloudsendWindow" parent="AdwApplicationWindow">
-    <property name="title" translatable="yes">CloudSend</property>
+  <template class="SimplesyncWindow" parent="AdwApplicationWindow">
+    <property name="title" translatable="yes">SimpleSync</property>
     <property name="default-width">400</property>
     <property name="default-height">700</property>
     <property name="content">

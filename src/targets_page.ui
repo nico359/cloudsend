@@ -2,8 +2,8 @@
 <interface>
   <requires lib="gtk" version="4.0"/>
   <requires lib="libadwaita" version="1.0"/>
-  <template class="CloudsendTargetsPage" parent="AdwNavigationPage">
-    <property name="title" translatable="yes">CloudSend</property>
+  <template class="SimplesyncTargetsPage" parent="AdwNavigationPage">
+    <property name="title" translatable="yes">SimpleSync</property>
     <property name="child">
       <object class="AdwToolbarView">
         <child type="top">
@@ -86,7 +86,7 @@
         <attribute name="action">app.account</attribute>
       </item>
       <item>
-        <attribute name="label" translatable="yes">_About CloudSend</attribute>
+        <attribute name="label" translatable="yes">_About SimpleSync</attribute>
         <attribute name="action">app.about</attribute>
       </item>
     </section>

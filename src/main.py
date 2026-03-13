@@ -24,16 +24,16 @@ gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
 from gi.repository import Gtk, Gio, Adw
-from .window import CloudsendWindow
+from .window import SimplesyncWindow
 
 
-class CloudsendApplication(Adw.Application):
+class SimplesyncApplication(Adw.Application):
     """The main application singleton class."""
 
     def __init__(self):
-        super().__init__(application_id='io.github.nico359.cloudsend',
+        super().__init__(application_id='io.github.nico359.simplesync',
                          flags=Gio.ApplicationFlags.DEFAULT_FLAGS,
-                         resource_base_path='/io/github/nico359/cloudsend')
+                         resource_base_path='/io/github/nico359/simplesync')
         self.create_action('quit', lambda *_: self.quit(), ['<control>q'])
         self.create_action('about', self.on_about_action)
         self.create_action('account', self.on_account_action)
@@ -46,13 +46,13 @@ class CloudsendApplication(Adw.Application):
         """
         win = self.props.active_window
         if not win:
-            win = CloudsendWindow(application=self)
+            win = SimplesyncWindow(application=self)
         win.present()
 
     def on_about_action(self, *args):
         """Callback for the app.about action."""
-        about = Adw.AboutDialog(application_name='CloudSend',
-                                application_icon='io.github.nico359.cloudsend',
+        about = Adw.AboutDialog(application_name='SimpleSync',
+                                application_icon='io.github.nico359.simplesync',
                                 developer_name='nico359',
                                 version='0.1.0',
                                 developers=['nico359'],
@@ -85,5 +85,5 @@ class CloudsendApplication(Adw.Application):
 
 def main(version):
     """The application's entry point."""
-    app = CloudsendApplication()
+    app = SimplesyncApplication()
     return app.run(sys.argv)

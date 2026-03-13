@@ -2,7 +2,7 @@
 <interface>
   <requires lib="gtk" version="4.0"/>
   <requires lib="libadwaita" version="1.0"/>
-  <template class="CloudsendTargetEditPage" parent="AdwNavigationPage">
+  <template class="SimplesyncTargetEditPage" parent="AdwNavigationPage">
     <property name="title" translatable="yes">Add Target</property>
     <property name="child">
       <object class="AdwToolbarView">

@@ -21,9 +21,9 @@ from gi.repository import Adw, Gtk, GLib, Gio
 from .db import get_db
 
 
-@Gtk.Template(resource_path='/io/github/nico359/cloudsend/target_edit_page.ui')
-class CloudsendTargetEditPage(Adw.NavigationPage):
-    __gtype_name__ = 'CloudsendTargetEditPage'
+@Gtk.Template(resource_path='/io/github/nico359/simplesync/target_edit_page.ui')
+class SimplesyncTargetEditPage(Adw.NavigationPage):
+    __gtype_name__ = 'SimplesyncTargetEditPage'
 
     local_folder_row = Gtk.Template.Child()
     remote_folder_row = Gtk.Template.Child()
@@ -76,10 +76,10 @@ class CloudsendTargetEditPage(Adw.NavigationPage):
             pass  # User cancelled
 
     def _on_remote_folder_clicked(self, row):
-        from .remote_browser_page import CloudsendRemoteBrowserPage
+        from .remote_browser_page import SimplesyncRemoteBrowserPage
 
         initial_path = self._remote_path or '/'
-        page = CloudsendRemoteBrowserPage(
+        page = SimplesyncRemoteBrowserPage(
             current_path=initial_path,
             on_selected=self._on_remote_folder_selected,
         )

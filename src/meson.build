@@ -1,9 +1,9 @@
 pkgdatadir = get_option('prefix') / get_option('datadir') / meson.project_name()
-moduledir = pkgdatadir / 'cloudsend'
+moduledir = pkgdatadir / 'simplesync'
 gnome = import('gnome')
 
-gnome.compile_resources('cloudsend',
-  'cloudsend.gresource.xml',
+gnome.compile_resources('simplesync',
+  'simplesync.gresource.xml',
   gresource_bundle: true,
   install: true,
   install_dir: pkgdatadir,
@@ -18,15 +18,15 @@ conf.set('localedir', get_option('prefix') / get_option('localedir'))
 conf.set('pkgdatadir', pkgdatadir)
 
 configure_file(
-  input: 'cloudsend.in',
-  output: 'cloudsend',
+  input: 'simplesync.in',
+  output: 'simplesync',
   configuration: conf,
   install: true,
   install_dir: get_option('bindir'),
   install_mode: 'rwxr-xr-x'
 )
 
-cloudsend_sources = [
+simplesync_sources = [
   '__init__.py',
   'main.py',
   'window.py',
@@ -40,4 +40,4 @@ cloudsend_sources = [
   'keyring.py',
 ]
 
-install_data(cloudsend_sources, install_dir: moduledir)
+install_data(simplesync_sources, install_dir: moduledir)

@@ -1,4 +1,4 @@
-application_id = 'io.github.nico359.cloudsend'
+application_id = 'io.github.nico359.simplesync'
 
 scalable_dir = 'hicolor' / 'scalable' / 'apps'
 install_data(

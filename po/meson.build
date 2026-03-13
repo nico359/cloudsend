@@ -1,1 +1,1 @@
-i18n.gettext('cloudsend', preset: 'glib')
+i18n.gettext('simplesync', preset: 'glib')

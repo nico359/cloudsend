@@ -35,13 +35,13 @@ def get_db():
 
 
 class Database:
-    """SQLite database for CloudSend target and file-state tracking."""
+    """SQLite database for SimpleSync target and file-state tracking."""
 
     def __init__(self):
-        data_dir = os.path.join(GLib.get_user_data_dir(), "cloudsend")
+        data_dir = os.path.join(GLib.get_user_data_dir(), "simplesync")
         os.makedirs(data_dir, exist_ok=True)
 
-        db_path = os.path.join(data_dir, "cloudsend.db")
+        db_path = os.path.join(data_dir, "simplesync.db")
         self._conn = sqlite3.connect(db_path)
         self._conn.row_factory = sqlite3.Row
         self._conn.execute("PRAGMA journal_mode=WAL")
